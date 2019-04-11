@@ -1,0 +1,24 @@
+server:
+ port: 8761
+# ������
+eureka:
+ instance:
+  hostname: discovery
+ client:
+  registerWithEureka: false
+  fetchRegistry: false
+  serviceUrl:
+   defaultZone: http://localhost:8761/eureka/
+   # 禁用自我保护模式 server.enable-self-preservation: false
+ # server:
+ #  enable-self-preservation: false
+ #开启eureka健康检查
+  healthcheck:
+   enabled: true
+#��������HTTP basic����֤
+security:
+ basic:
+  enabled: true
+ user:
+  name: duoduo
+  password: wangduoduo
